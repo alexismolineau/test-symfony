@@ -3,13 +3,13 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+
 
 class BlogController extends AbstractController
 {
 
     public function index()
     {
-      return new Response('<h1>Hello World!</h1>');
+      return $this->render('blog/index.html.twig');
     }
 }
