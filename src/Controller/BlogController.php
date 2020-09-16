@@ -15,12 +15,14 @@ class BlogController extends AbstractController
 
     public function add()
     {
-      return new Response('<h1>Page d\'ajout d\'article</h1>');
+      return $this->render('blog/add.html.twig');
     }
 
     public function show($url)
     {
-      return new Response('<h1>Vous êtes sur la page '. $url .'</h1>');
+      return $this->render('blog/show.html.twig', [
+        'slug' => $url
+      ]);
     }
 
     public function showDefault(){
@@ -29,7 +31,9 @@ class BlogController extends AbstractController
 
     public function edit($id)
     {
-      return new Response('<h1>Vous êtes dans le menu d\'édition de l\'article '. $id .'</h1>' );
+      return $this->render('blog/edit.html.twig',[
+        'slug' =>$id
+      ]);
     }
 
     public function remove($id)
