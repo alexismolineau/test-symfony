@@ -23,6 +23,10 @@ class BlogController extends AbstractController
       return new Response('<h1>Vous êtes sur la page '. $url .'</h1>');
     }
 
+    public function showDefault(){
+      return new Response('<h1>Rechercher un article</h1>');
+    }
+
     public function edit($id)
     {
       return new Response('<h1>Vous êtes dans le menu d\'édition de l\'article '. $id .'</h1>' );

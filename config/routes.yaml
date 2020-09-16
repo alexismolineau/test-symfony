@@ -13,6 +13,10 @@ article_show:
   path: /show/{url}
   controller: App\Controller\BlogController::show
 
+article_show_default:
+  path: /show
+  controller: App\Controller\BlogController::showDefault
+
 article_edit:
   path: /edit/{id}
   controller: App\Controller\BlogController::edit
